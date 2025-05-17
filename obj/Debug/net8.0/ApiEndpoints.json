@@ -2,7 +2,7 @@
   {
     "ContainingType": "Cp2Mottu.Controllers.MotosController",
     "Method": "GetMotos",
-    "RelativePath": "api/motos",
+    "RelativePath": "api/Motos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -17,12 +17,15 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "Motos"
     ]
   },
   {
     "ContainingType": "Cp2Mottu.Controllers.MotosController",
     "Method": "PostMoto",
-    "RelativePath": "api/motos",
+    "RelativePath": "api/Motos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -43,12 +46,15 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "Motos"
     ]
   },
   {
     "ContainingType": "Cp2Mottu.Controllers.MotosController",
     "Method": "GetMoto",
-    "RelativePath": "api/motos/{id}",
+    "RelativePath": "api/Motos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -68,7 +74,91 @@
           "text/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 503
       }
+    ],
+    "Tags": [
+      "Motos"
+    ]
+  },
+  {
+    "ContainingType": "Cp2Mottu.Controllers.MotosController",
+    "Method": "PatchMoto",
+    "RelativePath": "api/Motos/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moto",
+        "Type": "Cp2Mottu.Persistence.Moto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Cp2Mottu.Persistence.Moto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 503
+      }
+    ],
+    "Tags": [
+      "Motos"
     ]
   }
 ]
