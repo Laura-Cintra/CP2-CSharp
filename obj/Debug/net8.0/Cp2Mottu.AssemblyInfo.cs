@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cp2Mottu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e94702b8c4d3831ab80d194f4a5cf21bc055fbba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74e1925b2000da55d0de655b165c8edbb5c9bd23")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cp2Mottu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cp2Mottu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
