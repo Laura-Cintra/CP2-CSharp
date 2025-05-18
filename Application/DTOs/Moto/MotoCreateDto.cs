@@ -11,7 +11,7 @@ public class MotoCreateDto
     public string Placa { get; set; }
 
     [Required(ErrorMessage = "Modelo não pode estar vazio.")]
-    public string Modelo { get; set; } // Considerando que o modelo é um inteiro que representa o enum ModeloMoto
+    public string Modelo { get; set; } // string para facilitar a conversão do enum
 
     [Required(ErrorMessage = "Filial não pode estar vazia.")]
     public int IdFilial { get; set; } // Considerando que o idFilial é um inteiro que representa a filial
