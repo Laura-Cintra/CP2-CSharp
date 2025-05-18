@@ -24,6 +24,8 @@ public class Moto
         this.Filial = filial; // Atribui a filial
     }
 
+    public Moto() { } // Construtor padrão para o Entity Framework
+
     // Métodos para alterar a placa e o modelo da moto
     private void SetPlaca(string placa)
     {

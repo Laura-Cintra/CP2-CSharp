@@ -861,14 +861,16 @@
           },
           "placa": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "modelo": {
             "$ref": "#/components/schemas/ModeloMoto"
           },
           "idFilial": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "readOnly": true
           },
           "filial": {
             "$ref": "#/components/schemas/Filial"
@@ -880,23 +882,18 @@
         "required": [
           "idFilial",
           "modelo",
-          "nome",
           "placa"
         ],
         "type": "object",
         "properties": {
-          "nome": {
-            "minLength": 1,
-            "type": "string"
-          },
           "placa": {
             "maxLength": 7,
             "minLength": 7,
             "type": "string"
           },
           "modelo": {
-            "type": "integer",
-            "format": "int32"
+            "minLength": 1,
+            "type": "string"
           },
           "idFilial": {
             "type": "integer",

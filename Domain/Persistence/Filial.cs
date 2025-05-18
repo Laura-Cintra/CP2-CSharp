@@ -1,4 +1,5 @@
 ﻿using Cp2Mottu.Domain.Exceptions;
+using System.Runtime.Serialization;
 
 namespace Cp2Mottu.Domain.Persistence
 {
@@ -7,13 +8,13 @@ namespace Cp2Mottu.Domain.Persistence
         public int Id { get; private set; } // Identificador da filial
         public string Nome { get; private set; } // Nome da filial, usa private set para não permitir alterações externas
         public string Endereco { get; private set; } // Endereço da filial, usa private set para não permitir alterações externas
-
-        public  ICollection<Moto> Motos { get; private set; } // Coleção de motos associadas à filial, usa private set para não permitir alterações externas
+        public   ICollection<Moto> Motos { get; private set; } // Coleção de motos associadas à filial, usa private set para não permitir alterações externas
 
         public Filial(string nome, string endereco)
         {
             SetNome(nome);
             SetEndereco(endereco);
+            Motos = new List<Moto>();
         }
 
         private void SetEndereco(string endereco)
