@@ -63,16 +63,13 @@ API RESTful desenvolvida em .NET 8 para gerenciamento de motos e filiais, utiliz
        "Oracle": "Data Source=...;User ID=...;Password=..."
      }
      ```
-(No CMD da aplicação)
 2. **Restaurar pacotes e aplicar migrations**
- `dotnet restore dotnet ef database update`
+   (No CMD da aplicação) - `dotnet restore dotnet ef database update`
 
-(No CMD da aplicação)
-3. **Executar a aplicação**
-`dotnet run` 
+4. **Executar a aplicação**
+   (No CMD da aplicação) - `dotnet run` 
 
 Acesse o Swagger em: `https://localhost:7018/swagger/index.html`
-
 ---
 
 ## 👥 Equipe - Prisma.Code
