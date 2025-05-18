@@ -2,6 +2,7 @@
 
 API RESTful desenvolvida em .NET 8 para gerenciamento de motos e filiais, utilizando Oracle, Entity Framework Core, Clean Architecture e princípios de DDD.
 
+*solucação criada para o [check-point 2](https://github.com/2TDSPK-25/CP2)*
 ---
 
 ## 📦 Estrutura da Solução
