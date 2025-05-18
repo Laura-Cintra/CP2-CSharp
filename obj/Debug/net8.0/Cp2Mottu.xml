@@ -22,12 +22,12 @@
             </summary>
             <returns>
             Retorna uma lista de objetos FiliaisReadDto representando as filiais sem as motos associadas.
-            Retorna 200 OK se as filiais forem encontradas, ou 404 Not Found se não houver filiais.
+            Retorna 200 OK se as filiais forem encontradas.
             </returns>
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.GetFilial(System.Int32)">
             <summary>
-             Retorna uma filial específica pelo Id passado por parâmetro.
+             Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.
             </summary>
             <param name="id">
             Identificador da filial a ser retornada.
@@ -76,9 +76,52 @@
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.GetMotos">
             <summary>
-            
+            Retorna a lista de motos cadastradas no sistema.
             </summary>
-            <returns></returns>
+            <returns>
+            Retorna 200 OK com a lista de motos cadastradas.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.GetMoto(System.Int32)">
+            <summary>
+            Retorna uma moto específica pelo ID passado por parâmetro.
+            </summary>
+            <param name="id"> ID da moto a ser buscada </param>
+            <returns>
+            Retorna 200 OK com a moto encontrada ou 404 Not Found se a moto não for encontrada.
+            Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.PostMoto(Cp2Mottu.Application.DTOs.Moto.MotoCreateDto)">
+            <summary>
+            Insere uma nova moto no sistema.
+            </summary>
+            <param name="motoDto"> 
+            Objeto que representa o cadastro de uma nova moto.
+            </param>
+            <returns>
+            Retorna 201 Created com a moto criada ou 400 Bad Request se o corpo da requisição não for válido.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.PatchMoto(System.Int32,Cp2Mottu.Application.DTOs.Moto.MotoUpdateDto)">
+            <summary>
+            Retorna a moto com as informações atualizadas.
+            </summary>
+            <param name="id"> ID da moto a ser atualizada </param>
+            <param name="motoUpdateDto">Objeto contendo um ou mais atributos de moto a serem atualizados</param>
+            <returns>
+            Retorna 200 OK com a moto atualizada ou 404 Not Found se a moto ou nova filial não for encontrada.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.DeleteMoto(System.Int32)">
+            <summary>
+             Retorna código 204 confirmando a exclusão da moto com o ID passado por parâmetro.
+            </summary>
+            <param name="id"> ID da moto a ser excluída </param>
+            <returns>
+            Retorna código 204 No Content se a moto for excluída com sucesso ou 404 Not Found se a moto não for encontrada.
+            Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            </returns>
         </member>
     </members>
 </doc>

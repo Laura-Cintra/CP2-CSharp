@@ -19,17 +19,15 @@ namespace Cp2Mottu.Presentation.Controllers
             _context = context;
         }
 
-        // TODO: Criar o summary para o método GetMotos
+
         /// <summary>
-        /// 
+        /// Retorna a lista de motos cadastradas no sistema.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Retorna 200 OK com a lista de motos cadastradas.
+        /// </returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)] // Indica que este método pode retornar um sucesso 200 OK
-        [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found
-        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable
         public async Task<ActionResult<IEnumerable<Moto>>> GetMotos()
         {
             var motos = await _context.Motos.Include(m => m.Filial).ToListAsync(); // Busca todas as motos no banco de dados e inclui a entidade Filial relacionada
@@ -45,13 +43,18 @@ namespace Cp2Mottu.Presentation.Controllers
             return Ok(motosDto);
         }
 
-        // TODO: Criar o summary para o método GetMoto
+        /// <summary>
+        /// Retorna uma moto específica pelo ID passado por parâmetro.
+        /// </summary>
+        /// <param name="id"> ID da moto a ser buscada </param>
+        /// <returns>
+        /// Retorna 200 OK com a moto encontrada ou 404 Not Found se a moto não for encontrada.
+        /// Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+        /// </returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable
         public async Task<ActionResult<Moto>> GetMoto(int id)
         {
             var moto = await _context.Motos.Include(m => m.Filial).FirstOrDefaultAsync(m => m.Id == id); // Busca a moto pelo ID
@@ -70,13 +73,18 @@ namespace Cp2Mottu.Presentation.Controllers
         }
 
 
-        // TODO: Criar o summary para o método PostMoto
+        /// <summary>
+        /// Insere uma nova moto no sistema.
+        /// </summary>
+        /// <param name="motoDto"> 
+        /// Objeto que representa o cadastro de uma nova moto.
+        /// </param>
+        /// <returns>
+        /// Retorna 201 Created com a moto criada ou 400 Bad Request se o corpo da requisição não for válido.
+        /// </returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)] // Indica que este método pode retornar um sucesso 201 Created
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que o corpo da requisição não é válido
         public async Task<ActionResult<Moto>> PostMoto([FromBody] MotoCreateDto motoDto)
         {
 
@@ -109,19 +117,26 @@ namespace Cp2Mottu.Presentation.Controllers
             return CreatedAtAction(nameof(GetMoto), new { id = moto.Id }, motoReadDto); // Retorna o DTO de leitura com o status 201 Created, incluindo o ID da moto criada e o caminho para obter a moto
         }
 
-        // TODO: Criar o summary para o método PatchMoto
+
+        /// <summary>
+        /// Retorna a moto com as informações atualizadas.
+        /// </summary>
+        /// <param name="id"> ID da moto a ser atualizada </param>
+        /// <param name="motoUpdateDto">Objeto contendo um ou mais atributos de moto a serem atualizados</param>
+        /// <returns>
+        /// Retorna 200 OK com a moto atualizada ou 404 Not Found se a moto ou nova filial não for encontrada.
+        /// </returns>
         [HttpPatch("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)] // Indica que este método pode retornar um sucesso 200 OK
-        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request 
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable
+        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o corpo da requisição não seja válido
+        [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found caso a moto não seja encontrada
         public async Task<ActionResult<Moto>> PatchMoto(int id, [FromBody] MotoUpdateDto motoUpdateDto)
         {
             var moto = await _context.Motos.FirstOrDefaultAsync(m => m.Id == id); // Busca a moto pelo ID
 
             if (moto == null) // Se não encontrar, retorna 404 Not Found
             {
-                return NotFound();
+                return NotFound("Moto não encontrada");
             }
 
             var filial = await _context.Filiais.FindAsync(moto.IdFilial); // Busca a filial pelo ID
@@ -154,12 +169,20 @@ namespace Cp2Mottu.Presentation.Controllers
             ); // Cria um DTO de leitura com os dados da moto atualizada para evitar circularidade de repetição de dados da filial
             return Ok(motoReadDto); // Retorna a moto atualizada
         }
-        // TODO: Criar o summary para o método DeleteMoto
+
+
+        /// <summary>
+        ///  Retorna código 204 confirmando a exclusão da moto com o ID passado por parâmetro.
+        /// </summary>
+        /// <param name="id"> ID da moto a ser excluída </param>
+        /// <returns>
+        /// Retorna código 204 No Content se a moto for excluída com sucesso ou 404 Not Found se a moto não for encontrada.
+        /// Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+        /// </returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)] // Indica que este método pode retornar um sucesso 204 No Content
         [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable
+        [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o ID não seja válido (não seja um número inteiro)
         public async Task<IActionResult> DeleteMoto(int id)
         {
             var moto = await _context.Motos.FindAsync(id); // Busca a moto pelo ID

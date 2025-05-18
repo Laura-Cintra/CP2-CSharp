@@ -122,7 +122,7 @@
         "tags": [
           "Filial"
         ],
-        "summary": "Retorna uma filial específica pelo Id passado por parâmetro.",
+        "summary": "Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.",
         "parameters": [
           {
             "name": "id",
@@ -350,7 +350,7 @@
         "tags": [
           "Motos"
         ],
-        "summary": "",
+        "summary": "Retorna a lista de motos cadastradas no sistema.",
         "responses": {
           "200": {
             "description": "Success",
@@ -380,52 +380,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error"
-          },
-          "503": {
-            "description": "Server Error"
           }
         }
       },
@@ -433,7 +387,9 @@
         "tags": [
           "Motos"
         ],
+        "summary": "Insere uma nova moto no sistema.",
         "requestBody": {
+          "description": "Objeto que representa o cadastro de uma nova moto.",
           "content": {
             "application/json": {
               "schema": {
@@ -492,32 +448,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error"
-          },
-          "503": {
-            "description": "Server Error"
           }
         }
       }
@@ -527,10 +457,12 @@
         "tags": [
           "Motos"
         ],
+        "summary": "Retorna uma moto específica pelo ID passado por parâmetro.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID da moto a ser buscada",
             "required": true,
             "schema": {
               "type": "integer",
@@ -598,12 +530,6 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Server Error"
-          },
-          "503": {
-            "description": "Server Error"
           }
         }
       },
@@ -611,10 +537,12 @@
         "tags": [
           "Motos"
         ],
+        "summary": "Retorna a moto com as informações atualizadas.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID da moto a ser atualizada",
             "required": true,
             "schema": {
               "type": "integer",
@@ -623,6 +551,7 @@
           }
         ],
         "requestBody": {
+          "description": "Objeto contendo um ou mais atributos de moto a serem atualizados",
           "content": {
             "application/json": {
               "schema": {
@@ -682,11 +611,25 @@
               }
             }
           },
-          "500": {
-            "description": "Server Error"
-          },
-          "503": {
-            "description": "Server Error"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -694,10 +637,12 @@
         "tags": [
           "Motos"
         ],
+        "summary": "Retorna código 204 confirmando a exclusão da moto com o ID passado por parâmetro.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID da moto a ser excluída",
             "required": true,
             "schema": {
               "type": "integer",
@@ -729,11 +674,25 @@
               }
             }
           },
-          "500": {
-            "description": "Server Error"
-          },
-          "503": {
-            "description": "Server Error"
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }

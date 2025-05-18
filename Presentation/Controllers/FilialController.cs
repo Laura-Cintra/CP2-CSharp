@@ -26,7 +26,7 @@ public class FilialController : ControllerBase
     /// </summary>
     /// <returns>
     /// Retorna uma lista de objetos FiliaisReadDto representando as filiais sem as motos associadas.
-    /// Retorna 200 OK se as filiais forem encontradas, ou 404 Not Found se não houver filiais.
+    /// Retorna 200 OK se as filiais forem encontradas.
     /// </returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)] // Indica que este método pode retornar um sucesso 200 OK
@@ -46,7 +46,7 @@ public class FilialController : ControllerBase
 
 
     /// <summary>
-    ///  Retorna uma filial específica pelo Id passado por parâmetro.
+    ///  Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.
     /// </summary>
     /// <param name="id">
     /// Identificador da filial a ser retornada.
