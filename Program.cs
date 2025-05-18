@@ -1,4 +1,4 @@
-using Cp2Mottu.Context;
+using Cp2Mottu.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<MotosContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("Oracle"))); // Configura o DbContext para usar o Oracle com a string de conexão definida no appsettings.json
 
 var app = builder.Build();
