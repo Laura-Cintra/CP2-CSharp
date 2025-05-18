@@ -1,18 +1,23 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Cp2Mottu",
-    "version": "1.0"
+    "title": "API de filiais e motos Mottu",
+    "description": "API para gerenciar filiais e motos da Mottu nos pátios",
+    "contact": {
+      "name": "Prisma.Code",
+      "email": "prismacode3@gmail.com"
+    },
+    "version": "v1"
   },
   "paths": {
     "/api/Filial": {
       "get": {
         "tags": [
-          "Filiais"
+          "Filial"
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -39,58 +44,12 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "503": {
-            "description": "Service Unavailable"
           }
         }
       },
       "post": {
         "tags": [
-          "Filiais"
+          "Filial"
         ],
         "requestBody": {
           "content": {
@@ -113,7 +72,7 @@
         },
         "responses": {
           "201": {
-            "description": "Created",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -128,26 +87,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/FilialReadDto"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -171,12 +110,6 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "503": {
-            "description": "Service Unavailable"
           }
         }
       }
@@ -184,7 +117,7 @@
     "/api/Filial/{id}": {
       "get": {
         "tags": [
-          "Filiais"
+          "Filial"
         ],
         "parameters": [
           {
@@ -199,7 +132,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -257,18 +190,12 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "503": {
-            "description": "Service Unavailable"
           }
         }
       },
       "patch": {
         "tags": [
-          "Filiais"
+          "Filial"
         ],
         "parameters": [
           {
@@ -302,7 +229,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Success"
           },
           "404": {
             "description": "Not Found",
@@ -343,18 +270,12 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "503": {
-            "description": "Service Unavailable"
           }
         }
       },
       "delete": {
         "tags": [
-          "Filiais"
+          "Filial"
         ],
         "parameters": [
           {
@@ -369,7 +290,7 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Success"
           },
           "404": {
             "description": "Not Found",
@@ -410,12 +331,6 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          },
-          "503": {
-            "description": "Service Unavailable"
           }
         }
       }
@@ -427,7 +342,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -496,10 +411,10 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           },
           "503": {
-            "description": "Service Unavailable"
+            "description": "Server Error"
           }
         }
       },
@@ -528,7 +443,7 @@
         },
         "responses": {
           "201": {
-            "description": "Created",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -588,10 +503,10 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           },
           "503": {
-            "description": "Service Unavailable"
+            "description": "Server Error"
           }
         }
       }
@@ -614,7 +529,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -674,10 +589,10 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           },
           "503": {
-            "description": "Service Unavailable"
+            "description": "Server Error"
           }
         }
       },
@@ -717,7 +632,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -757,10 +672,10 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           },
           "503": {
-            "description": "Service Unavailable"
+            "description": "Server Error"
           }
         }
       },
@@ -781,7 +696,7 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Success"
           },
           "404": {
             "description": "Not Found",
@@ -804,10 +719,10 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           },
           "503": {
-            "description": "Service Unavailable"
+            "description": "Server Error"
           }
         }
       }
@@ -914,16 +829,14 @@
           },
           "placa": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "modelo": {
             "$ref": "#/components/schemas/ModeloMoto"
           },
           "idFilial": {
             "type": "integer",
-            "format": "int32",
-            "readOnly": true
+            "format": "int32"
           },
           "filial": {
             "$ref": "#/components/schemas/Filial"
@@ -945,7 +858,6 @@
             "type": "string"
           },
           "modelo": {
-            "minLength": 1,
             "type": "string"
           },
           "idFilial": {

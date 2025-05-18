@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cp2Mottu</name>
+    </assembly>
+    <members>
+        <member name="T:Cp2Mottu.Migrations.projetoV1">
+            <inheritdoc />
+        </member>
+        <member name="M:Cp2Mottu.Migrations.projetoV1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cp2Mottu.Migrations.projetoV1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cp2Mottu.Migrations.projetoV1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.GetFiliais">
+            <summary>
+            Obtém uma lista de todas as filiais sem as motos associadas.
+            </summary>
+            <returns>
+            Retorna uma lista de objetos FiliaisReadDto representando as filiais sem as motos associadas.
+            Retorna 200 OK se as filiais forem encontradas, ou 404 Not Found se não houver filiais.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.GetFilial(System.Int32)">
+            <summary>
+             Retorna uma filial específica pelo Id passado por parâmetro.
+            </summary>
+            <param name="id">
+            Identificador da filial a ser retornada.
+            </param>
+            <returns>
+            Retorna um objeto FilialReadDto representando a filial encontrada.
+            Retorna 200 OK se a filial for encontrada, ou 404 Not Found se não houver filial com o ID fornecido.
+            Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.PostFilial(Cp2Mottu.Application.DTOs.Filial.FilialCreateDto)">
+            <summary>
+            Cria uma nova filial no banco de dados com os dados fornecidos no DTO.
+            </summary>
+            <param name="filialCreateDto">
+            Dto de criação da filial, contendo os dados necessários para criar uma nova filial.
+            </param>
+            <returns>
+            Retorna um objeto FilialReadDto representando a filial criada.
+            Retorna 201 Created se a filial for criada com sucesso, ou 400 se o objeto filialCreateDto não for passado corretamente no corpo.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.PatchFilial(System.Int32,Cp2Mottu.Application.DTOs.Filial.FilialUpdateDto)">
+            <summary>
+             Altera um ou mais dados de uma filial existente no banco de dados com os dados fornecidos no DTO.
+            </summary>
+            <param name="id">ID da filial a ser atualizada</param>
+            <param name="filialUpdateDto">Objeto contendo um ou mais atributos de uma filial</param>
+            <returns>
+            Retorna um objeto FilialReadDto representando a filial atualizada.
+            Retorna 200 OK se a filial for atualizada com sucesso, ou 404 Not Found se não houver filial com o ID fornecido.
+            REtorna 400 Bad Request se o objeto filialUpdateDto não for passado corretamente no corpo.
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.FilialController.DeleteFilial(System.Int32)">
+            <summary>
+            Deleta uma filial existente no banco de dados com o ID fornecido.
+            </summary>
+            <param name="id">
+            ID da filial a ser excluída.
+            </param>
+            <returns>
+            REtona 204 No Content se a filial for excluída com sucesso, ou 404 Not Found se não houver filial com o ID fornecido.
+            Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            </returns>
+        </member>
+        <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.GetMotos">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

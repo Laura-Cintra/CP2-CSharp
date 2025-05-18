@@ -6,6 +6,7 @@ C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Cp2Mottu.runtimeconfig.json
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Cp2Mottu.dll
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Cp2Mottu.pdb
+C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Cp2Mottu.xml
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Humanizer.dll
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\bin\Debug\net8.0\Microsoft.Build.Locator.dll
@@ -135,10 +136,11 @@ C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\Cp2Mottu.csproj.Up2Date
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\Cp2Mottu.dll
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\refint\Cp2Mottu.dll
+C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\Cp2Mottu.xml
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\Cp2Mottu.pdb
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\Cp2Mottu.genruntimeconfig.cache
 C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\ref\Cp2Mottu.dll
+C:\Users\Vinic\Documents\programacao\Fiap\CSharp.NET-FIAP\Cp2Mottu\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
