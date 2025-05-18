@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Cp2Mottu.Domain.Persistence.Filial, Cp2Mottu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Cp2Mottu.Application.DTOs.Filial.FilialReadDto, Cp2Mottu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -59,14 +59,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "filial",
-        "Type": "Cp2Mottu.Domain.Persistence.Filial",
+        "Name": "filialCreateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Cp2Mottu.Domain.Persistence.Filial",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialReadDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -123,7 +123,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Cp2Mottu.Domain.Persistence.Filial",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialReadDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -178,8 +178,8 @@
         "IsRequired": true
       },
       {
-        "Name": "filial",
-        "Type": "Cp2Mottu.Domain.Persistence.Filial",
+        "Name": "filialUpdateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialUpdateDto",
         "IsRequired": true
       }
     ],
@@ -495,7 +495,7 @@
   },
   {
     "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
-    "Method": "DelteMoto",
+    "Method": "DeleteMoto",
     "RelativePath": "api/Motos/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

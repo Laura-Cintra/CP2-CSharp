@@ -3,64 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\domain\\persistence\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:domain\\persistence\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\moto\\motocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\moto\\motocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\presentation\\controllers\\motoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:presentation\\controllers\\motoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\migrations\\20250518021142_projetov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:migrations\\20250518021142_projetov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\domain\\persistence\\moto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:domain\\persistence\\moto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\moto\\motoreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\moto\\motoreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\moto\\motoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\moto\\motoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\domain\\exceptions\\domainexcpetion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:domain\\exceptions\\domainexcpetion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\mappings\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\mappings\\motomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\mappings\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\mappings\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\presentation\\controllers\\filialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:presentation\\controllers\\filialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\domain\\enums\\modelomoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:domain\\enums\\modelomoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\filial\\filialupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\filial\\filialupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\filial\\filialreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\filial\\filialreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\filial\\filiaisreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\filial\\filiaisreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\mappings\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\mappings\\filialmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\domain\\persistence\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:domain\\persistence\\filial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|c:\\users\\vinic\\documents\\programacao\\fiap\\csharp.net-fiap\\cp2mottu\\application\\dtos\\filial\\filialcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170C76C8-A5C5-422B-A6EB-3B123DB1FC86}|Cp2Mottu.csproj|solutionrelative:application\\dtos\\filial\\filialcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,8 +42,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 240,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FilialController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\FilialController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\FilialController.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\FilialController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\FilialController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwDcAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T23:43:27.375Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MotosController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\MotosController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\MotosController.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\MotosController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\MotosController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T05:09:05.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FiliaisReadDto.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FiliaisReadDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Filial\\FiliaisReadDto.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FiliaisReadDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Filial\\FiliaisReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T04:21:12.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FilialReadDto.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialReadDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Filial\\FilialReadDto.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialReadDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Filial\\FilialReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T02:33:01.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Filial.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Filial.cs",
+              "RelativeDocumentMoniker": "Domain\\Persistence\\Filial.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Filial.cs",
+              "RelativeToolTip": "Domain\\Persistence\\Filial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T23:16:13.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FilialUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialUpdateDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Filial\\FilialUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialUpdateDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Filial\\FilialUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T02:34:20.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FilialCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialCreateDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Filial\\FilialCreateDto.cs",
+              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Filial\\FilialCreateDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Filial\\FilialCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T02:33:33.777Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -86,190 +150,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250518021142_projetoV1.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Migrations\\20250518021142_projetoV1.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250518021142_projetoV1.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Migrations\\20250518021142_projetoV1.cs",
-              "RelativeToolTip": "Migrations\\20250518021142_projetoV1.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T02:11:43.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-18T02:10:25.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MotoUpdateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoUpdateDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Moto\\MotoUpdateDto.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoUpdateDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\Moto\\MotoUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T01:19:04.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MotoCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoCreateDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Moto\\MotoCreateDto.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoCreateDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\Moto\\MotoCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T00:22:39.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MotoReadDto.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoReadDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Moto\\MotoReadDto.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\DTOs\\Moto\\MotoReadDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\Moto\\MotoReadDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T00:17:38.798Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T00:08:50.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MotosController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\MotosController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\MotosController.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\MotosController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\MotosController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAqwEQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T00:07:04.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FilialController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\FilialController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\FilialController.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Presentation\\Controllers\\FilialController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\FilialController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:43:27.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ModeloMoto.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Enums\\ModeloMoto.cs",
-              "RelativeDocumentMoniker": "Domain\\Enums\\ModeloMoto.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Enums\\ModeloMoto.cs",
-              "RelativeToolTip": "Domain\\Enums\\ModeloMoto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:43:00.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DomainExcpetion.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Exceptions\\DomainExcpetion.cs",
-              "RelativeDocumentMoniker": "Domain\\Exceptions\\DomainExcpetion.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Exceptions\\DomainExcpetion.cs",
-              "RelativeToolTip": "Domain\\Exceptions\\DomainExcpetion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:42:58.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Infrastructure\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Infrastructure\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:40:22.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "FilialMapping.cs",
               "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\Mappings\\FilialMapping.cs",
               "RelativeDocumentMoniker": "Application\\Mappings\\FilialMapping.cs",
               "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\Mappings\\FilialMapping.cs",
               "RelativeToolTip": "Application\\Mappings\\FilialMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:37:59.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MotoMapping.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\Mappings\\MotoMapping.cs",
-              "RelativeDocumentMoniker": "Application\\Mappings\\MotoMapping.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Application\\Mappings\\MotoMapping.cs",
-              "RelativeToolTip": "Application\\Mappings\\MotoMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:36:37.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Filial.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Filial.cs",
-              "RelativeDocumentMoniker": "Domain\\Persistence\\Filial.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Filial.cs",
-              "RelativeToolTip": "Domain\\Persistence\\Filial.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:16:13.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Moto.cs",
-              "DocumentMoniker": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Moto.cs",
-              "RelativeDocumentMoniker": "Domain\\Persistence\\Moto.cs",
-              "ToolTip": "C:\\Users\\Vinic\\Documents\\programacao\\Fiap\\CSharp.NET-FIAP\\Cp2Mottu\\Domain\\Persistence\\Moto.cs",
-              "RelativeToolTip": "Domain\\Persistence\\Moto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T23:55:12.481Z",
+              "WhenOpened": "2025-05-17T23:37:59.875Z",
               "EditorCaption": ""
             }
           ]

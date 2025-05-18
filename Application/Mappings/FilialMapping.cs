@@ -20,6 +20,11 @@ namespace Cp2Mottu.Application.Mappings
             builder.Property(f => f.Endereco)
                 .IsRequired() // Define que a propriedade é obrigatória
                 .HasMaxLength(200); // Define o tamanho máximo da string
+
+            builder.HasMany(f => f.Motos)
+                .WithOne(m => m.Filial)
+                .HasForeignKey(m => m.IdFilial);
+
         }
     }
 }

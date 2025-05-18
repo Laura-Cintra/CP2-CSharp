@@ -43,11 +43,12 @@ public class Moto
 
     private void SetModelo(string nomeModelo)
     {
-        if (!Enum.IsDefined(typeof(ModeloMoto), nomeModelo))
+        var modeloUpper = nomeModelo.ToUpper();
+        if (!Enum.IsDefined(typeof(ModeloMoto), modeloUpper))
         {
             throw new ArgumentOutOfRangeException(nameof(nomeModelo), "Modelo inválido.");
         }
-        Modelo = Enum.Parse<ModeloMoto>(nomeModelo, ignoreCase: true); // Converte o idModelo para o enum ModeloMoto
+        Modelo = Enum.Parse<ModeloMoto>(modeloUpper, ignoreCase: true); // Converte o idModelo para o enum ModeloMoto
     }
 
     // Métodos públicos para alterar a placa e o modelo da moto
@@ -59,5 +60,11 @@ public class Moto
     public void AlterarModelo(string novoModelo)
     {
         SetModelo(novoModelo); // Chama o método para validar e atribuir o novo modelo
+    }
+
+    public void AlterarFilial(int novoIdFilial,Filial novaFilial)
+    {
+        this.IdFilial = novoIdFilial; // Atribui o novo idFilial
+        this.Filial = novaFilial; // Atribui a nova filial
     }
 }

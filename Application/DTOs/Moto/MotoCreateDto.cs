@@ -19,7 +19,7 @@ public class MotoCreateDto
     public MotoCreateDto(string placa, string modelo, int idFilial)
     {
         Placa = placa;
-        Modelo = modelo;
+        Modelo = modelo.ToUpper();
         IdFilial = idFilial;
     }
 }
