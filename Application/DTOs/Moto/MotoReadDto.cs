@@ -7,6 +7,11 @@
         public string Modelo { get; set; }
         public string NomeFilial { get; set; }
 
+
+        public MotoReadDto()
+        {
+        }
+
         public MotoReadDto(int id, string placa, string modelo, string nomeFilial)
         {
             Id = id;

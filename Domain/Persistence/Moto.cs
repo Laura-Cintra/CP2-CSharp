@@ -16,10 +16,10 @@ public class Moto
     public Filial Filial { get; private set; } // Navegação para a entidade Filial
 
     // Construtor da classe Moto
-    public Moto(string placa, int idModelo, int idFilial, Filial filial)
+    public Moto(string placa, string nomeModelo, int idFilial, Filial filial)
     {
         SetPlaca(placa);
-        SetModelo(idModelo);// Converte o idModelo para o enum ModeloMoto
+        SetModelo(nomeModelo);// Converte o nomeModelo para o enum ModeloMoto
         this.IdFilial = idFilial; // Atribui o idFilial
         this.Filial = filial; // Atribui a filial
     }

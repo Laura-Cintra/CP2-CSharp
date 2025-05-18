@@ -90,7 +90,7 @@ namespace Cp2Mottu.Presentation.Controllers
                 return BadRequest("Placa já existe.");
             }
             var filial = await _context.Filiais.FindAsync(motoDto.IdFilial); // Busca a filial pelo ID
-            moto = new Moto(motoDto.Placa, (int)motoDto.Modelo, motoDto.IdFilial, filial); // Cria uma nova moto com os dados do DTO e a filial encontrada
+            moto = new Moto(motoDto.Placa, motoDto.Modelo.ToString(), motoDto.IdFilial, filial); // Cria uma nova moto com os dados do DTO e a filial encontrada
             await _context.Motos.AddAsync(moto); // Adiciona a moto ao contexto
             await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
 
