@@ -73,8 +73,8 @@ Acesse o Swagger em: `https://localhost:7018/swagger/index.html`
 ---
 
 ## 👥 Equipe - Prisma.Code
-- [Laura de Oliveira Cintra] - [RM 558843]
-- [Maria Eduarda Alves da Paixão] - [RM 558832]
-- [Vinícius Saes de Souza] - [RM 554456]
+- Laura de Oliveira Cintra - RM 558843
+- Maria Eduarda Alves da Paixão - RM 558832
+- Vinícius Saes de Souza - RM 554456
 
 > “Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores, para fazer melhor ainda.” — Mario Sergio Cortella
