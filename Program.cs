@@ -28,9 +28,9 @@ builder.Services.AddSwaggerGen(swagger =>
         
     });
 
-    //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"; // Obtém o nome do arquivo XML de documentação
-    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile); // Cria o caminho completo para o arquivo XML
-    //swagger.IncludeXmlComments(xmlPath); // Inclui o arquivo XML de documentação no Swagger
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"; // Obtém o nome do arquivo XML de documentação
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile); // Cria o caminho completo para o arquivo XML
+    swagger.IncludeXmlComments(xmlPath); // Inclui o arquivo XML de documentação no Swagger
 });
 
 builder.Services.AddDbContext<AppDbContext>(options =>

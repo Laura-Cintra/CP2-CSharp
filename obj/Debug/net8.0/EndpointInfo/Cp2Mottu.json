@@ -15,6 +15,7 @@
         "tags": [
           "Filial"
         ],
+        "summary": "Obtém uma lista de todas as filiais sem as motos associadas.",
         "responses": {
           "200": {
             "description": "Success",
@@ -51,7 +52,9 @@
         "tags": [
           "Filial"
         ],
+        "summary": "Cria uma nova filial no banco de dados com os dados fornecidos no DTO.",
         "requestBody": {
+          "description": "Dto de criação da filial, contendo os dados necessários para criar uma nova filial.",
           "content": {
             "application/json": {
               "schema": {
@@ -119,10 +122,12 @@
         "tags": [
           "Filial"
         ],
+        "summary": "Retorna uma filial específica pelo Id passado por parâmetro.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Identificador da filial a ser retornada.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -197,10 +202,12 @@
         "tags": [
           "Filial"
         ],
+        "summary": "Altera um ou mais dados de uma filial existente no banco de dados com os dados fornecidos no DTO.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID da filial a ser atualizada",
             "required": true,
             "schema": {
               "type": "integer",
@@ -209,6 +216,7 @@
           }
         ],
         "requestBody": {
+          "description": "Objeto contendo um ou mais atributos de uma filial",
           "content": {
             "application/json": {
               "schema": {
@@ -277,10 +285,12 @@
         "tags": [
           "Filial"
         ],
+        "summary": "Deleta uma filial existente no banco de dados com o ID fornecido.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "ID da filial a ser excluída.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -340,6 +350,7 @@
         "tags": [
           "Motos"
         ],
+        "summary": "",
         "responses": {
           "200": {
             "description": "Success",
