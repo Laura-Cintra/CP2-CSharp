@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Cp2Mottu.Application.Mappings
+namespace Cp2Mottu.Infrastructure.Mappings
 {
     public class MotoMapping : IEntityTypeConfiguration<Moto>
     {

@@ -1,5 +1,5 @@
-﻿using Cp2Mottu.Application.Mappings;
-using Cp2Mottu.Domain.Persistence;
+﻿using Cp2Mottu.Domain.Persistence;
+using Cp2Mottu.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cp2Mottu.Infrastructure.Context

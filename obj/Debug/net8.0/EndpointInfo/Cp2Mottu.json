@@ -728,15 +728,17 @@
         "additionalProperties": false
       },
       "FilialCreateDto": {
+        "required": [
+          "endereco",
+          "nome"
+        ],
         "type": "object",
         "properties": {
           "nome": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "endereco": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
         },
         "additionalProperties": false
