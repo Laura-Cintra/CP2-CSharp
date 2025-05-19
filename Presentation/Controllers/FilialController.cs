@@ -30,6 +30,8 @@ public class FilialController : ControllerBase
     /// </returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)] // Indica que este método pode retornar um sucesso 200 OK
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error caso ocorra algum erro inesperado
+    [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<ActionResult<IEnumerable<FilialReadDto>>> GetFiliais()
     {
         var filiais = await _context.Filiais.ToListAsync(); // Inclui as motos relacionadas à filial na consulta
@@ -49,7 +51,7 @@ public class FilialController : ControllerBase
     ///  Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.
     /// </summary>
     /// <param name="id">
-    /// Identificador da filial a ser retornada.
+    /// ID da filial a ser retornada.
     /// </param>
     /// <returns>
     /// Retorna um objeto FilialReadDto representando a filial encontrada.
@@ -60,6 +62,8 @@ public class FilialController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found caso a filial não seja encontrada
     [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o ID não seja válido (não seja um número inteiro)
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error caso ocorra algum erro inesperado
+    [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<ActionResult<FilialReadDto>> GetFilial(int id)
     {
         var filial = await _context.Filiais.Include(f => f.Motos).FirstOrDefaultAsync(f => f.Id == id);
@@ -99,6 +103,8 @@ public class FilialController : ControllerBase
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)] // Indica que este método pode retornar um sucesso 201 Created caso a filial seja criada com sucesso
     [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o objeto filialCreateDto não seja passado corretamente no corpo
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error caso ocorra algum erro inesperado
+    [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<ActionResult<FilialReadDto>> PostFilial([FromBody] FilialCreateDto filialCreateDto)
     {
         if (filialCreateDto == null)
@@ -138,8 +144,10 @@ public class FilialController : ControllerBase
     /// </returns>
     [HttpPatch("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)] // Indica que este método pode retornar um sucesso 200 OK caso a filial seja atualizada com sucesso
-    [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found
+    [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found caso a filial não seja encontrada
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error caso ocorra algum erro inesperado
+    [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<IActionResult> PatchFilial(int id, [FromBody] FilialUpdateDto filialUpdateDto)
     {
         var filial = await _context.Filiais.FirstOrDefaultAsync(f => f.Id == id);
@@ -184,7 +192,9 @@ public class FilialController : ControllerBase
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)] // Indica que este método pode retornar um sucesso 204 noContent caso a filial seja excluída com sucesso
     [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found caso a filial não seja encontrada
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o ID não seja válido (não seja um número inteiro)
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que este método pode retornar um erro 500 Internal Server Error caso ocorra algum erro inesperado
+    [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<IActionResult> DeleteFilial(int id)
     {
         var filial = await _context.Filiais.FindAsync(id);

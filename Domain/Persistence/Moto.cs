@@ -27,20 +27,20 @@ public class Moto
     public Moto() { } // Construtor padrão para o Entity Framework
 
     // Métodos para alterar a placa e o modelo da moto
+    
     private void SetPlaca(string placa)
     {
         if (string.IsNullOrWhiteSpace(placa))
         {
-            throw new DomainExcpetion("Placa não pode ser nula ou vazia.", nameof(placa));
+            throw new DomainExcepetion("Placa não pode ser nula ou vazia.", nameof(placa));
         }
-        else if (placa.Length != 7)
+        else if (placa.Length < 6 || placa.Length > 7)
         {
-            throw new ArgumentException("Placa deve ter exatamente 7 caracteres.", nameof(placa));
+            throw new ArgumentException("Placa deve ter no mínimo 6 e no máximo 7 caracteres.", nameof(placa));
         }
 
         this.Placa = placa.ToUpper(); // Converte a placa para letras maiúsculas
     }
-
     private void SetModelo(string nomeModelo)
     {
         var modeloUpper = nomeModelo.ToUpper();

@@ -7,7 +7,7 @@ public class MotoCreateDto
 {
   
     [Required(ErrorMessage = "Placa não pode estar vazia.")]
-    [StringLength(7, MinimumLength = 7,ErrorMessage = "Placa deve ter 7 caracteres.")] // Considerando apenas Brasil
+    [StringLength(7, MinimumLength = 6,ErrorMessage = "Placa deve ter no mínmo 6 e no máximo 7 caracteres.")] // Considerando apenas Brasil
     public string Placa { get; set; }
 
     [Required(ErrorMessage = "Modelo não pode estar vazio.")]

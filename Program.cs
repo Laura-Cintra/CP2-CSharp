@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 // TODO: Adicionar repository
+// TODO: refatorar linguagem das classes/pastas para ptbr ou inglês
 
 builder.Services.AddSwaggerGen(swagger =>
 {

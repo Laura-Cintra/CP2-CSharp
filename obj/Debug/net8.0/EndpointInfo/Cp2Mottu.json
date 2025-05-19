@@ -45,6 +45,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -113,6 +119,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       }
@@ -127,7 +139,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Identificador da filial a ser retornada.",
+            "description": "ID da filial a ser retornada.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -195,6 +207,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -278,6 +296,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -341,6 +365,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       }
@@ -380,6 +410,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -448,6 +484,52 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       }
@@ -530,6 +612,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -630,6 +718,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       },
@@ -693,6 +787,12 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
           }
         }
       }
@@ -826,7 +926,7 @@
         "properties": {
           "placa": {
             "maxLength": 7,
-            "minLength": 7,
+            "minLength": 6,
             "type": "string"
           },
           "modelo": {

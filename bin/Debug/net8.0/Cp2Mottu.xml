@@ -30,7 +30,7 @@
              Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.
             </summary>
             <param name="id">
-            Identificador da filial a ser retornada.
+            ID da filial a ser retornada.
             </param>
             <returns>
             Retorna um objeto FilialReadDto representando a filial encontrada.
@@ -80,6 +80,8 @@
             </summary>
             <returns>
             Retorna 200 OK com a lista de motos cadastradas.
+            Retorna 500 Internal Server Error se ocorrer um erro interno no servidor.
+            Retorna 503 Service Unavailable se o serviço estiver temporariamente indisponível.
             </returns>
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.GetMoto(System.Int32)">
@@ -90,6 +92,8 @@
             <returns>
             Retorna 200 OK com a moto encontrada ou 404 Not Found se a moto não for encontrada.
             Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            Retorna 500 Internal Server Error se ocorrer um erro interno no servidor.
+            Retorna 503 Service Unavailable se o serviço estiver temporariamente indisponível.
             </returns>
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.PostMoto(Cp2Mottu.Application.DTOs.Moto.MotoCreateDto)">
@@ -101,6 +105,8 @@
             </param>
             <returns>
             Retorna 201 Created com a moto criada ou 400 Bad Request se o corpo da requisição não for válido.
+            Retorna 500 Internal Server Error se ocorrer um erro interno no servidor.
+            Retorna 503 Service Unavailable se o serviço estiver temporariamente indisponível.
             </returns>
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.PatchMoto(System.Int32,Cp2Mottu.Application.DTOs.Moto.MotoUpdateDto)">
@@ -111,6 +117,8 @@
             <param name="motoUpdateDto">Objeto contendo um ou mais atributos de moto a serem atualizados</param>
             <returns>
             Retorna 200 OK com a moto atualizada ou 404 Not Found se a moto ou nova filial não for encontrada.
+            Retorna 500 Internal Server Error se ocorrer um erro interno no servidor.
+            Retorna 503 Service Unavailable se o serviço estiver temporariamente indisponível.
             </returns>
         </member>
         <member name="M:Cp2Mottu.Presentation.Controllers.MotosController.DeleteMoto(System.Int32)">
@@ -121,6 +129,8 @@
             <returns>
             Retorna código 204 No Content se a moto for excluída com sucesso ou 404 Not Found se a moto não for encontrada.
             Retorna 400 Bad Request se o ID não for válido (não for um número inteiro).
+            Retorna 500 Internal Server Error se ocorrer um erro interno no servidor.
+            Retorna 503 Service Unavailable se o serviço estiver temporariamente indisponível.
             </returns>
         </member>
     </members>

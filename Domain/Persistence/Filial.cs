@@ -20,7 +20,7 @@ namespace Cp2Mottu.Domain.Persistence
         {
             if (string.IsNullOrWhiteSpace(endereco))
             {
-                throw new DomainExcpetion("Endereço não pode ser nulo ou vazio.", nameof(endereco)); // Verifica se o endereço é nulo ou vazio
+                throw new DomainExcepetion("Endereço não pode ser nulo ou vazio.", nameof(endereco)); // Verifica se o endereço é nulo ou vazio
             }
 
             this.Endereco = endereco; // Atribui o endereço
