@@ -1,15 +1,15 @@
 [
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialControlador",
     "Method": "GetFiliais",
-    "RelativePath": "api/Filial",
+    "RelativePath": "api/FilialControlador",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Cp2Mottu.Application.DTOs.Filial.FilialReadDto, Cp2Mottu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Cp2Mottu.Application.DTOs.Filial.FilialLeituraDto, Cp2Mottu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -33,22 +33,22 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialController",
-    "Method": "PostFilial",
-    "RelativePath": "api/Filial",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialControlador",
+    "Method": "CriarFilial",
+    "RelativePath": "api/FilialControlador",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "filialCreateDto",
-        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialCreateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialCriarDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialReadDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialLeituraDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -81,9 +81,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialControlador",
     "Method": "GetFilial",
-    "RelativePath": "api/Filial/{id}",
+    "RelativePath": "api/FilialControlador/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -96,7 +96,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialReadDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialLeituraDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -138,9 +138,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialControlador",
     "Method": "PatchFilial",
-    "RelativePath": "api/Filial/{id}",
+    "RelativePath": "api/FilialControlador/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -152,7 +152,7 @@
       },
       {
         "Name": "filialUpdateDto",
-        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialUpdateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Filial.FilialAtualizarDto",
         "IsRequired": true
       }
     ],
@@ -196,9 +196,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialController",
-    "Method": "DeleteFilial",
-    "RelativePath": "api/Filial/{id}",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.FilialControlador",
+    "Method": "DeletaFilial",
+    "RelativePath": "api/FilialControlador/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -249,9 +249,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosControlador",
     "Method": "GetMotos",
-    "RelativePath": "api/Motos",
+    "RelativePath": "api/MotosControlador",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -282,16 +282,16 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
-    "Method": "PostMoto",
-    "RelativePath": "api/Motos",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosControlador",
+    "Method": "CriarMoto",
+    "RelativePath": "api/MotosControlador",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "motoDto",
-        "Type": "Cp2Mottu.Application.DTOs.Moto.MotoCreateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Moto.MotoCriarDto",
         "IsRequired": true
       }
     ],
@@ -348,9 +348,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosControlador",
     "Method": "GetMoto",
-    "RelativePath": "api/Motos/{id}",
+    "RelativePath": "api/MotosControlador/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -405,9 +405,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosControlador",
     "Method": "PatchMoto",
-    "RelativePath": "api/Motos/{id}",
+    "RelativePath": "api/MotosControlador/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -419,7 +419,7 @@
       },
       {
         "Name": "motoUpdateDto",
-        "Type": "Cp2Mottu.Application.DTOs.Moto.MotoUpdateDto",
+        "Type": "Cp2Mottu.Application.DTOs.Moto.MotoAtualizarDto",
         "IsRequired": true
       }
     ],
@@ -467,9 +467,9 @@
     ]
   },
   {
-    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosController",
-    "Method": "DeleteMoto",
-    "RelativePath": "api/Motos/{id}",
+    "ContainingType": "Cp2Mottu.Presentation.Controllers.MotosControlador",
+    "Method": "DeletarMoto",
+    "RelativePath": "api/MotosControlador/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

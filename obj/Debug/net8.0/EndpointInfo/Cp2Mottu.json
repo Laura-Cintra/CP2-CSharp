@@ -10,10 +10,10 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Filial": {
+    "/api/FilialControlador": {
       "get": {
         "tags": [
-          "Filial"
+          "FilialControlador"
         ],
         "summary": "Obtém uma lista de todas as filiais sem as motos associadas.",
         "responses": {
@@ -24,7 +24,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FilialReadDto"
+                    "$ref": "#/components/schemas/FilialLeituraDto"
                   }
                 }
               },
@@ -32,7 +32,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FilialReadDto"
+                    "$ref": "#/components/schemas/FilialLeituraDto"
                   }
                 }
               },
@@ -40,7 +40,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FilialReadDto"
+                    "$ref": "#/components/schemas/FilialLeituraDto"
                   }
                 }
               }
@@ -56,7 +56,7 @@
       },
       "post": {
         "tags": [
-          "Filial"
+          "FilialControlador"
         ],
         "summary": "Cria uma nova filial no banco de dados com os dados fornecidos no DTO.",
         "requestBody": {
@@ -64,17 +64,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialCreateDto"
+                "$ref": "#/components/schemas/FilialCriarDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialCreateDto"
+                "$ref": "#/components/schemas/FilialCriarDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialCreateDto"
+                "$ref": "#/components/schemas/FilialCriarDto"
               }
             }
           }
@@ -85,17 +85,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               }
             }
@@ -129,10 +129,10 @@
         }
       }
     },
-    "/api/Filial/{id}": {
+    "/api/FilialControlador/{id}": {
       "get": {
         "tags": [
-          "Filial"
+          "FilialControlador"
         ],
         "summary": "Retorna uma filial específica pelo Id passado por parâmetro junto com suas motos relacionadas.",
         "parameters": [
@@ -153,17 +153,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FilialReadDto"
+                  "$ref": "#/components/schemas/FilialLeituraDto"
                 }
               }
             }
@@ -218,7 +218,7 @@
       },
       "patch": {
         "tags": [
-          "Filial"
+          "FilialControlador"
         ],
         "summary": "Altera um ou mais dados de uma filial existente no banco de dados com os dados fornecidos no DTO.",
         "parameters": [
@@ -238,17 +238,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialUpdateDto"
+                "$ref": "#/components/schemas/FilialAtualizarDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialUpdateDto"
+                "$ref": "#/components/schemas/FilialAtualizarDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FilialUpdateDto"
+                "$ref": "#/components/schemas/FilialAtualizarDto"
               }
             }
           }
@@ -307,7 +307,7 @@
       },
       "delete": {
         "tags": [
-          "Filial"
+          "FilialControlador"
         ],
         "summary": "Deleta uma filial existente no banco de dados com o ID fornecido.",
         "parameters": [
@@ -375,10 +375,10 @@
         }
       }
     },
-    "/api/Motos": {
+    "/api/MotosControlador": {
       "get": {
         "tags": [
-          "Motos"
+          "MotosControlador"
         ],
         "summary": "Retorna a lista de motos cadastradas no sistema.",
         "responses": {
@@ -421,7 +421,7 @@
       },
       "post": {
         "tags": [
-          "Motos"
+          "MotosControlador"
         ],
         "summary": "Insere uma nova moto no sistema.",
         "requestBody": {
@@ -429,17 +429,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoCreateDto"
+                "$ref": "#/components/schemas/MotoCriarDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoCreateDto"
+                "$ref": "#/components/schemas/MotoCriarDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoCreateDto"
+                "$ref": "#/components/schemas/MotoCriarDto"
               }
             }
           }
@@ -534,10 +534,10 @@
         }
       }
     },
-    "/api/Motos/{id}": {
+    "/api/MotosControlador/{id}": {
       "get": {
         "tags": [
-          "Motos"
+          "MotosControlador"
         ],
         "summary": "Retorna uma moto específica pelo ID passado por parâmetro.",
         "parameters": [
@@ -623,7 +623,7 @@
       },
       "patch": {
         "tags": [
-          "Motos"
+          "MotosControlador"
         ],
         "summary": "Retorna a moto com as informações atualizadas.",
         "parameters": [
@@ -643,17 +643,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoUpdateDto"
+                "$ref": "#/components/schemas/MotoAtualizarDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoUpdateDto"
+                "$ref": "#/components/schemas/MotoAtualizarDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/MotoUpdateDto"
+                "$ref": "#/components/schemas/MotoAtualizarDto"
               }
             }
           }
@@ -729,7 +729,7 @@
       },
       "delete": {
         "tags": [
-          "Motos"
+          "MotosControlador"
         ],
         "summary": "Retorna código 204 confirmando a exclusão da moto com o ID passado por parâmetro.",
         "parameters": [
@@ -827,7 +827,21 @@
         },
         "additionalProperties": false
       },
-      "FilialCreateDto": {
+      "FilialAtualizarDto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "endereco": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FilialCriarDto": {
         "required": [
           "endereco",
           "nome"
@@ -843,7 +857,7 @@
         },
         "additionalProperties": false
       },
-      "FilialReadDto": {
+      "FilialLeituraDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -861,22 +875,8 @@
           "motos": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/MotoReadDto"
+              "$ref": "#/components/schemas/MotoLeituraDto"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "FilialUpdateDto": {
-        "type": "object",
-        "properties": {
-          "nome": {
-            "type": "string",
-            "nullable": true
-          },
-          "endereco": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -916,7 +916,26 @@
         },
         "additionalProperties": false
       },
-      "MotoCreateDto": {
+      "MotoAtualizarDto": {
+        "type": "object",
+        "properties": {
+          "placa": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "idFilial": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MotoCriarDto": {
         "required": [
           "idFilial",
           "modelo",
@@ -939,7 +958,7 @@
         },
         "additionalProperties": false
       },
-      "MotoReadDto": {
+      "MotoLeituraDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -956,25 +975,6 @@
           },
           "nomeFilial": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MotoUpdateDto": {
-        "type": "object",
-        "properties": {
-          "placa": {
-            "type": "string",
-            "nullable": true
-          },
-          "modelo": {
-            "type": "string",
-            "nullable": true
-          },
-          "idFilial": {
-            "type": "integer",
-            "format": "int32",
             "nullable": true
           }
         },

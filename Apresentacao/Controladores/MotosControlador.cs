@@ -1,4 +1,5 @@
-﻿using Cp2Mottu.Application;
+﻿using Cp2Mottu.Aplicacao.Repositorios;
+using Cp2Mottu.Application;
 using Cp2Mottu.Application.DTOs.Moto;
 using Cp2Mottu.Domain.Enums;
 using Cp2Mottu.Domain.Persistence;
@@ -8,25 +9,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cp2Mottu.Presentation.Controllers;
 
-<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
 
-=======
->>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
+
 [Route("api/[controller]")] // Define a rota base para o controller, removendo o prefixo "api" do caminho da URL, ficando apenas "motos"
 [ApiController] // Indica que este controller é um controlador de API
 [Tags("Motos")] // Define a tag para o Swagger, que agrupa os endpoints deste controller na documentação
 public class MotosControlador : ControllerBase
 {
-    private readonly RepositorioMoto _repositorio;
+    private readonly MotoRepositorio _repositorio;
+    private readonly FilialRepositorio _filialRepositorio;
 
-<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
-    public MotosControlador(AppDbContext context)
-=======
-    public MotosController(RepositorioMoto repositorio)
->>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
+    public MotosControlador(MotoRepositorio repositorio, FilialRepositorio filialRepositorio)
     {
-        this._repositorio = repositorio;
-    }
+        _repositorio = repositorio;
+        _filialRepositorio = filialRepositorio;
+    }   
 
 
     /// <summary>
@@ -43,7 +40,9 @@ public class MotosControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
     public async Task<ActionResult<IEnumerable<Moto>>> GetMotos()
     {
-        var motos = await _context.Motos.Include(m => m.Filial).ToListAsync(); // Busca todas as motos no banco de dados e inclui a entidade Filial relacionada
+        var motos = await _repositorio.ObterTodos();
+
+        
 
         var motosDto = motos.Select(m => new MotoLeituraDto
         {
@@ -74,7 +73,7 @@ public class MotosControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
     public async Task<ActionResult<Moto>> GetMoto(int id)
     {
-        var moto = await _context.Motos.Include(m => m.Filial).FirstOrDefaultAsync(m => m.Id == id); // Busca a moto pelo ID
+        var moto = await _repositorio.ObterPorId(id);
         if (moto == null) // Se não encontrar, retorna 404 Not Found
         {
             return NotFound();
@@ -111,45 +110,32 @@ public class MotosControlador : ControllerBase
 
     public async Task<ActionResult<Moto>> CriarMoto([FromBody] MotoCriarDto motoDto)
     {
-<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
+        var filial = await _filialRepositorio.ObterPorId(motoDto.IdFilial);
 
-        if (motoDto == null)
-        {
-            return BadRequest("Moto não pode ser nula.");
-        }
-        if (!Enum.IsDefined(typeof(ModeloMoto), motoDto.Modelo.ToUpper())) // Verifica se o modelo é válido, pode passar tanto id quanto o enum
-        {
-            return BadRequest("Modelo inválido.");
-        }
-        var moto = await _context.Motos.FirstOrDefaultAsync(m => m.Placa == motoDto.Placa); // Verifica se a placa já existe no banco de dados
-        var filial = await _context.Filiais.FindAsync(motoDto.IdFilial); // Busca a filial pelo ID
-
-        if (moto != null)
-        {
-            return Conflict("Placa já existe.");
-        }
-        if (filial == null) // Se não encontrar a filial, retorna um erro 404 Not Found
+        if (filial == null)
         {
             return NotFound("Filial não encontrada.");
         }
-        moto = new Moto(motoDto.Placa, motoDto.Modelo.ToString(), motoDto.IdFilial, filial); // Cria uma nova moto com os dados do DTO e a filial encontrada
-        filial.Motos.Add(moto); // Adiciona a moto à lista de motos da filial
-        await _context.Motos.AddAsync(moto); // Adiciona a moto ao contexto
-        await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
+        
+        if(Enum.IsDefined(typeof(ModeloMoto), motoDto.Modelo.ToUpper()) == false) // Verifica se o modelo é válido
+        {
+            return BadRequest("Modelo inválido.");
+        }
+        var moto = await _repositorio.Adicionar(new Moto(motoDto.Placa, motoDto.Modelo, motoDto.IdFilial, filial));
 
-        var motoReadDto = new MotoLeituraDto(
-            moto.Id,
-            moto.Placa,
-            moto.Modelo.ToString(),
-            moto.Filial.Nome
-        ); // Cria um DTO de leitura com os dados da moto criada
-=======
-        var motoReadDto =  _repositorio.adicionar()// Cria um DTO de leitura com os dados da moto criada
->>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
-        return CreatedAtAction(nameof(GetMoto), new { id = moto.Id }, motoReadDto); // Retorna o DTO de leitura com o status 201 Created, incluindo o ID da moto criada e o caminho para obter a moto
+        var motoLeituraDto = new MotoLeituraDto
+        {
+            Id = moto.Id,
+            Placa = moto.Placa,
+            Modelo = moto.Modelo.ToString(),
+            NomeFilial = moto.Filial.Nome
+        };
+
+
+        return CreatedAtAction(nameof(GetMoto), new { id = moto.Id }, motoLeituraDto); // Retorna o DTO de leitura com o status 201 Created, incluindo o ID da moto criada e o caminho para obter a moto
     }
 
-        
+
     /// <summary>
     /// Retorna a moto com as informações atualizadas.
     /// </summary>
@@ -168,14 +154,14 @@ public class MotosControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
     public async Task<ActionResult<Moto>> PatchMoto(int id, [FromBody] MotoAtualizarDto motoUpdateDto)
     {
-        var moto = await _context.Motos.FirstOrDefaultAsync(m => m.Id == id); // Busca a moto pelo ID
+        var moto = await _repositorio.ObterPorId(id); // Busca a moto pelo ID
 
         if (moto == null) // Se não encontrar, retorna 404 Not Found
         {
             return NotFound("Moto não encontrada");
         }
 
-        var filial = await _context.Filiais.FindAsync(moto.IdFilial); // Busca a filial pelo ID
+        var filial = await _filialRepositorio.ObterPorId(moto.IdFilial); // Busca a filial pelo ID
 
         if (motoUpdateDto.Placa != null)
         {
@@ -187,21 +173,19 @@ public class MotosControlador : ControllerBase
         }
         if (motoUpdateDto.IdFilial != null)
         {
-            var novaFilial = await _context.Filiais.FindAsync(motoUpdateDto.IdFilial); // Busca a nova filial pelo ID
+            var novaFilial = await _filialRepositorio.ObterPorId(motoUpdateDto.IdFilial.Value); // Busca a nova filial pelo ID
             if (novaFilial == null) // Se não encontrar, retorna 404 Not Found
             {
                 return NotFound("Filial não encontrada.");
             }
             moto.AlterarFilial(motoUpdateDto.IdFilial.Value, novaFilial); // Atualiza a filial
         }
-        _context.Entry(moto).State = EntityState.Modified; // Marca a entidade como modificada
-        _context.Entry(filial).State = EntityState.Modified; // Adiciona a moto à lista de motos da filial
-        await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
+        var motoAtualizada = await _repositorio.Atualizar(moto);
         var motoReadDto = new MotoLeituraDto(
-            moto.Id,
-            moto.Placa,
-            moto.Modelo.ToString(),
-            moto.Filial.Nome
+            motoAtualizada.Id,
+            motoAtualizada.Placa,
+            motoAtualizada.Modelo.ToString(),
+            motoAtualizada.Filial.Nome
         ); // Cria um DTO de leitura com os dados da moto atualizada para evitar circularidade de repetição de dados da filial
         return Ok(motoReadDto); // Retorna a moto atualizada
     }
@@ -225,13 +209,12 @@ public class MotosControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
     public async Task<IActionResult> DeletarMoto(int id)
     {
-        var moto = await _context.Motos.FindAsync(id); // Busca a moto pelo ID
+        var moto = await _repositorio.ObterPorId(id); // Busca a moto pelo ID
         if (moto == null) // Se não encontrar, retorna 404 Not Found
         {
             return NotFound();
         }
-        _context.Motos.Remove(moto); // Remove a moto do contexto
-        await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
+        await _repositorio.Remover(moto); // Remove a moto do contexto
         return NoContent(); // Retorna 204 No Content
     }
 }
