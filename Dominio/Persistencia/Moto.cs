@@ -18,8 +18,8 @@ public class Moto
     // Construtor da classe Moto
     public Moto(string placa, string nomeModelo, int idFilial, Filial filial)
     {
-        SetPlaca(placa);
-        SetModelo(nomeModelo);// Converte o nomeModelo para o enum ModeloMoto
+        DefinirPlaca(placa);
+        DefinirModelo(nomeModelo);// Converte o nomeModelo para o enum ModeloMoto
         this.IdFilial = idFilial; // Atribui o idFilial
         this.Filial = filial; // Atribui a filial
     }
@@ -28,11 +28,11 @@ public class Moto
 
     // Métodos para alterar a placa e o modelo da moto
     
-    private void SetPlaca(string placa)
+    private void DefinirPlaca(string placa)
     {
         if (string.IsNullOrWhiteSpace(placa))
         {
-            throw new DomainExcepetion("Placa não pode ser nula ou vazia.", nameof(placa));
+            throw new ExcecaoDominio("Placa não pode ser nula ou vazia.", nameof(placa));
         }
         else if (placa.Length < 6 || placa.Length > 7)
         {
@@ -41,7 +41,7 @@ public class Moto
 
         this.Placa = placa.ToUpper(); // Converte a placa para letras maiúsculas
     }
-    private void SetModelo(string nomeModelo)
+    private void DefinirModelo(string nomeModelo)
     {
         var modeloUpper = nomeModelo.ToUpper();
         if (!Enum.IsDefined(typeof(ModeloMoto), modeloUpper))
@@ -54,12 +54,12 @@ public class Moto
     // Métodos públicos para alterar a placa e o modelo da moto
     public void AlterarPlaca(string novaPlaca)
     {
-        SetPlaca(novaPlaca); // Chama o método para validar e atribuir a nova placa
+        DefinirPlaca(novaPlaca); // Chama o método para validar e atribuir a nova placa
     }
 
     public void AlterarModelo(string novoModelo)
     {
-        SetModelo(novoModelo); // Chama o método para validar e atribuir o novo modelo
+        DefinirModelo(novoModelo); // Chama o método para validar e atribuir o novo modelo
     }
 
     public void AlterarFilial(int novoIdFilial,Filial novaFilial)

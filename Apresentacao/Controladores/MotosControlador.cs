@@ -7,16 +7,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cp2Mottu.Presentation.Controllers;
 
-// TODO: Refatorar o a documentação dos códigos de retorno, incluindo 500 e 503
 
 [Route("api/[controller]")] // Define a rota base para o controller, removendo o prefixo "api" do caminho da URL, ficando apenas "motos"
 [ApiController] // Indica que este controller é um controlador de API
 [Tags("Motos")] // Define a tag para o Swagger, que agrupa os endpoints deste controller na documentação
-public class MotosController : ControllerBase
+public class MotosControlador : ControllerBase
 {
     private readonly AppDbContext _context;
 
-    public MotosController(AppDbContext context)
+    public MotosControlador(AppDbContext context)
     {
         _context = context;
     }
@@ -38,7 +37,7 @@ public class MotosController : ControllerBase
     {
         var motos = await _context.Motos.Include(m => m.Filial).ToListAsync(); // Busca todas as motos no banco de dados e inclui a entidade Filial relacionada
 
-        var motosDto = motos.Select(m => new MotoReadDto
+        var motosDto = motos.Select(m => new MotoLeituraDto
         {
             Id = m.Id,
             Placa = m.Placa,
@@ -72,7 +71,7 @@ public class MotosController : ControllerBase
         {
             return NotFound();
         }
-        var motoDto = new MotoReadDto
+        var motoDto = new MotoLeituraDto
         {
             Id = moto.Id,
             Placa = moto.Placa,
@@ -102,7 +101,7 @@ public class MotosController : ControllerBase
     [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que ocorreu um erro interno no servidor
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
 
-    public async Task<ActionResult<Moto>> PostMoto([FromBody] MotoCreateDto motoDto)
+    public async Task<ActionResult<Moto>> CriarMoto([FromBody] MotoCriarDto motoDto)
     {
 
         if (motoDto == null)
@@ -129,7 +128,7 @@ public class MotosController : ControllerBase
         await _context.Motos.AddAsync(moto); // Adiciona a moto ao contexto
         await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
 
-        var motoReadDto = new MotoReadDto(
+        var motoReadDto = new MotoLeituraDto(
             moto.Id,
             moto.Placa,
             moto.Modelo.ToString(),
@@ -155,7 +154,7 @@ public class MotosController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)] // Indica que este método pode retornar um erro 404 Not Found caso a moto não seja encontrada
     [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que ocorreu um erro interno no servidor
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
-    public async Task<ActionResult<Moto>> PatchMoto(int id, [FromBody] MotoUpdateDto motoUpdateDto)
+    public async Task<ActionResult<Moto>> PatchMoto(int id, [FromBody] MotoAtualizarDto motoUpdateDto)
     {
         var moto = await _context.Motos.FirstOrDefaultAsync(m => m.Id == id); // Busca a moto pelo ID
 
@@ -186,7 +185,7 @@ public class MotosController : ControllerBase
         _context.Entry(moto).State = EntityState.Modified; // Marca a entidade como modificada
         _context.Entry(filial).State = EntityState.Modified; // Adiciona a moto à lista de motos da filial
         await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
-        var motoReadDto = new MotoReadDto(
+        var motoReadDto = new MotoLeituraDto(
             moto.Id,
             moto.Placa,
             moto.Modelo.ToString(),
@@ -212,7 +211,7 @@ public class MotosController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)] // Indica que este método pode retornar um erro 400 Bad Request caso o ID não seja válido (não seja um número inteiro)
     [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Indica que ocorreu um erro interno no servidor
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que o serviço está temporariamente indisponível
-    public async Task<IActionResult> DeleteMoto(int id)
+    public async Task<IActionResult> DeletarMoto(int id)
     {
         var moto = await _context.Motos.FindAsync(id); // Busca a moto pelo ID
         if (moto == null) // Se não encontrar, retorna 404 Not Found

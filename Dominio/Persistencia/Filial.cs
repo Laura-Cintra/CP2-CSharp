@@ -12,21 +12,21 @@ namespace Cp2Mottu.Domain.Persistence
 
         public Filial(string nome, string endereco)
         {
-            SetNome(nome);
-            SetEndereco(endereco);
+            DefinirNome(nome);
+            DefinirEndereco(endereco);
         }
 
-        private void SetEndereco(string endereco)
+        private void DefinirEndereco(string endereco)
         {
             if (string.IsNullOrWhiteSpace(endereco))
             {
-                throw new DomainExcepetion("Endereço não pode ser nulo ou vazio.", nameof(endereco)); // Verifica se o endereço é nulo ou vazio
+                throw new ExcecaoDominio("Endereço não pode ser nulo ou vazio.", nameof(endereco)); // Verifica se o endereço é nulo ou vazio
             }
 
             this.Endereco = endereco; // Atribui o endereço
         }
 
-        private void SetNome(string nome)
+        private void DefinirNome(string nome)
         {
             if (string.IsNullOrWhiteSpace(nome))
             {
@@ -37,12 +37,12 @@ namespace Cp2Mottu.Domain.Persistence
 
         public void AlterarEndereco(string novoEndereco)
         {
-            SetEndereco(novoEndereco);
+            DefinirEndereco(novoEndereco);
         }
 
         public void AlterarNome(string novoNome)
         {
-            SetNome(novoNome);
+            DefinirNome(novoNome);
         }
 
     }

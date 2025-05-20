@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cp2Mottu.Application.DTOs.Moto;
 
-public class MotoCreateDto
+public class MotoCriarDto
 {
   
     [Required(ErrorMessage = "Placa não pode estar vazia.")]
@@ -16,7 +16,7 @@ public class MotoCreateDto
     [Required(ErrorMessage = "Filial não pode estar vazia.")]
     public int IdFilial { get; set; } // Considerando que o idFilial é um inteiro que representa a filial
 
-    public MotoCreateDto(string placa, string modelo, int idFilial)
+    public MotoCriarDto(string placa, string modelo, int idFilial)
     {
         Placa = placa;
         Modelo = modelo.ToUpper();

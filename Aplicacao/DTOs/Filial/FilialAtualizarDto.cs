@@ -2,17 +2,17 @@
 
 namespace Cp2Mottu.Application.DTOs.Filial
 {
-    public class FilialUpdateDto
+    public class FilialAtualizarDto
     {
         public string? Nome { get; set; }
         public string? Endereco { get; set; }
-        public FilialUpdateDto(string nome, string endereco)
+        public FilialAtualizarDto(string nome, string endereco)
         {
      
             Nome = nome;
             Endereco = endereco;
         }
 
-        public FilialUpdateDto() { } // Construtor padrão para inicialização sem parâmetros
+        public FilialAtualizarDto() { } // Construtor padrão para inicialização sem parâmetros
     }
 }

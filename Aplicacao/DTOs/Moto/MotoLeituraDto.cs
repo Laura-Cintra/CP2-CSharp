@@ -1,6 +1,6 @@
 ﻿namespace Cp2Mottu.Application.DTOs.Moto
 {
-    public class MotoReadDto
+    public class MotoLeituraDto
     {
         public int Id { get; set; }
         public string Placa { get; set; }
@@ -8,11 +8,11 @@
         public string NomeFilial { get; set; }
 
 
-        public MotoReadDto()
+        public MotoLeituraDto()
         {
         }
 
-        public MotoReadDto(int id, string placa, string modelo, string nomeFilial)
+        public MotoLeituraDto(int id, string placa, string modelo, string nomeFilial)
         {
             Id = id;
             Placa = placa;
