@@ -8,7 +8,6 @@ namespace Cp2Mottu.Application.DTOs.Filial
         public string? Endereco { get; set; }
         public FilialAtualizarDto(string nome, string endereco)
         {
-     
             Nome = nome;
             Endereco = endereco;
         }

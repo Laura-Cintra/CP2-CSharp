@@ -1,4 +1,5 @@
-﻿using Cp2Mottu.Application.DTOs.Moto;
+﻿using Cp2Mottu.Application;
+using Cp2Mottu.Application.DTOs.Moto;
 using Cp2Mottu.Domain.Enums;
 using Cp2Mottu.Domain.Persistence;
 using Cp2Mottu.Infrastructure.Context;
@@ -7,17 +8,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cp2Mottu.Presentation.Controllers;
 
+<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
 
+=======
+>>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
 [Route("api/[controller]")] // Define a rota base para o controller, removendo o prefixo "api" do caminho da URL, ficando apenas "motos"
 [ApiController] // Indica que este controller é um controlador de API
 [Tags("Motos")] // Define a tag para o Swagger, que agrupa os endpoints deste controller na documentação
 public class MotosControlador : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly RepositorioMoto _repositorio;
 
+<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
     public MotosControlador(AppDbContext context)
+=======
+    public MotosController(RepositorioMoto repositorio)
+>>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
     {
-        _context = context;
+        this._repositorio = repositorio;
     }
 
 
@@ -103,6 +111,7 @@ public class MotosControlador : ControllerBase
 
     public async Task<ActionResult<Moto>> CriarMoto([FromBody] MotoCriarDto motoDto)
     {
+<<<<<<< Updated upstream:Apresentacao/Controladores/MotosControlador.cs
 
         if (motoDto == null)
         {
@@ -134,10 +143,13 @@ public class MotosControlador : ControllerBase
             moto.Modelo.ToString(),
             moto.Filial.Nome
         ); // Cria um DTO de leitura com os dados da moto criada
+=======
+        var motoReadDto =  _repositorio.adicionar()// Cria um DTO de leitura com os dados da moto criada
+>>>>>>> Stashed changes:Presentation/Controllers/MotosController.cs
         return CreatedAtAction(nameof(GetMoto), new { id = moto.Id }, motoReadDto); // Retorna o DTO de leitura com o status 201 Created, incluindo o ID da moto criada e o caminho para obter a moto
     }
 
-
+        
     /// <summary>
     /// Retorna a moto com as informações atualizadas.
     /// </summary>
