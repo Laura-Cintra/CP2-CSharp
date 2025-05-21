@@ -27,6 +27,7 @@ namespace Cp2Mottu.Application
         public async Task<Filial> Atualizar(Filial filial)
         {
             _context.Filiais.Update(filial);
+            _context.Entry(filial).State = EntityState.Modified; // Marca a entidade como modificada
             await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
 
             return filial; // Retorna a moto atualizada
@@ -38,7 +39,7 @@ namespace Cp2Mottu.Application
 
 
         public async Task<List<Filial>> ObterTodos() => 
-            await _context.Filiais.ToListAsync(); // Obtém todas as motos, incluindo as filiais associadas
+            await _context.Filiais.OrderBy(f => f.Id).ToListAsync(); // Obtém todas as motos, incluindo as filiais associadas
 
 
         public async Task<bool> Remover(Filial filial)

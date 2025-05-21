@@ -1,4 +1,6 @@
-﻿using Cp2Mottu.Application.DTOs.Filial;
+﻿using Cp2Mottu.Aplicacao.Repositorios;
+using Cp2Mottu.Application;
+using Cp2Mottu.Application.DTOs.Filial;
 using Cp2Mottu.Application.DTOs.Moto;
 using Cp2Mottu.Domain.Persistence;
 using Cp2Mottu.Infrastructure.Context;
@@ -14,13 +16,15 @@ namespace Cp2Mottu.Presentation.Controllers;
 public class FilialControlador : ControllerBase
 {
 
-    private readonly AppDbContext _context;
-    public FilialControlador(AppDbContext context)
+    private readonly FilialRepositorio _repositorio;
+    private readonly MotoRepositorio _motoRepositorio;
+    public FilialControlador(FilialRepositorio repositorio, MotoRepositorio motoRepositorio)
     {
-        _context = context;
+        _repositorio = repositorio;
+        _motoRepositorio = motoRepositorio;
     }
 
-    
+
     /// <summary>
     /// Obtém uma lista de todas as filiais sem as motos associadas.
     /// </summary>
@@ -34,7 +38,7 @@ public class FilialControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<ActionResult<IEnumerable<FilialLeituraDto>>> GetFiliais()
     {
-        var filiais = await _context.Filiais.ToListAsync(); // Inclui as motos relacionadas à filial na consulta
+        var filiais = await _repositorio.ObterTodos(); // Altera para obter as filiais através do repositório
 
         var filiaisDto = filiais.Select(f => new FiliaisLeituraDto
         {
@@ -66,7 +70,7 @@ public class FilialControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<ActionResult<FilialLeituraDto>> GetFilial(int id)
     {
-        var filial = await _context.Filiais.Include(f => f.Motos).FirstOrDefaultAsync(f => f.Id == id);
+        var filial = await _repositorio.ObterPorId(id);
 
         if (filial == null)
         {
@@ -114,21 +118,16 @@ public class FilialControlador : ControllerBase
 
         var filial = new Filial(filialCreateDto.Nome, filialCreateDto.Endereco); // Cria uma nova filial com os dados do DTO
 
-        await _context.Filiais.AddAsync(filial);
-        await _context.SaveChangesAsync();
+        await _repositorio.Adicionar(filial); // Adicionar a filial ao repositório
+
+
+        // TODO: VERIFICAR SE TRAZ UMA LISTA VAZIA EM 'MOTOS'
         var filialReadDto = new FilialLeituraDto
         {
             Id = filial.Id,
             Nome = filial.Nome,
-            Endereco = filial.Endereco,
-            Motos = filial.Motos.Select(m => new MotoLeituraDto
-            {
-                Id = m.Id,
-                Placa = m.Placa,
-                Modelo = m.Modelo.ToString().ToUpper(), // Converte o enum ModeloMoto para string
-                NomeFilial = filial.Nome // Inclui o nome da filial relacionada
-            }).ToList() // Mapeia as motos para o DTO Moto, incluindo a entidade Filial relacionada
-        };
+            Endereco = filial.Endereco
+        }; // Cria um DTO de leitura com os dados da filial criada
         return CreatedAtAction(nameof(GetFilial), new { id = filial.Id }, filialReadDto);
     }
 
@@ -150,7 +149,12 @@ public class FilialControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<IActionResult> PatchFilial(int id, [FromBody] FilialAtualizarDto filialUpdateDto)
     {
-        var filial = await _context.Filiais.FirstOrDefaultAsync(f => f.Id == id);
+        var filial = await _repositorio.ObterPorId(id);
+
+        if (filial == null)
+        {
+            return NotFound();
+        }
         if (filialUpdateDto.Endereco != null)
         {
             filial.AlterarEndereco(filialUpdateDto.Endereco);
@@ -160,8 +164,7 @@ public class FilialControlador : ControllerBase
             filial.AlterarNome(filialUpdateDto.Nome);
         }
 
-        _context.Entry(filial).State = EntityState.Modified; // Marca a entidade como modificada para que o EF Core saiba que ela foi alterada e precisa ser atualizada no banco de dados e não adicionada como uma nova entidade
-        await _context.SaveChangesAsync();
+        await _repositorio.Atualizar(filial);
 
         var filialReadDto = new FilialLeituraDto
         {
@@ -197,13 +200,14 @@ public class FilialControlador : ControllerBase
     [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)] // Indica que este método pode retornar um erro 503 Service Unavailable caso o serviço esteja indisponível
     public async Task<IActionResult> DeletaFilial(int id)
     {
-        var filial = await _context.Filiais.FindAsync(id);
+        var filial = await _repositorio.ObterPorId(id);
         if (filial == null)
         {
             return NotFound();
         }
-        _context.Filiais.Remove(filial);
-        await _context.SaveChangesAsync();
+
+        await _repositorio.Remover(filial);
+        
         return NoContent();
     }
 }
