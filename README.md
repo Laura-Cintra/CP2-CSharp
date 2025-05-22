@@ -5,6 +5,8 @@ API RESTful desenvolvida em .NET 8 para gerenciamento de motos e filiais, utiliz
 *solucação criada para o [check-point 2](https://github.com/2TDSPK-25/CP2)*
 ---
 
+TESTE TESTE TESTE
+
 ## 📦 Estrutura da Solução
 
 - **Domain**: Entidades de domínio, enums e exceções.

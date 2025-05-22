@@ -121,7 +121,7 @@ public class FilialControlador : ControllerBase
         await _repositorio.Adicionar(filial); // Adicionar a filial ao repositório
 
 
-        // TODO: VERIFICAR SE TRAZ UMA LISTA VAZIA EM 'MOTOS'
+        
         var filialReadDto = new FilialLeituraDto
         {
             Id = filial.Id,
